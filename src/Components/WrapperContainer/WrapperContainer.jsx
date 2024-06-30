@@ -1,9 +1,10 @@
 import React from 'react'
 
-function WrapperContainer() {
+export const WrapperContainer = ({navHead, children}) => {
   return (
-    <div>WrapperContainer</div>
+    <div className={!navHead ? " container mx-auto px-4 bg-wrapperBg h-full w-full bg-cover bg-no-repeat bg-center rounded-xl -translate-y-36 drop-shadow-2xl"
+    :"container mx-auto px-4 "}>
+      {children}
+    </div>
   )
 }
-
-export default WrapperContainer

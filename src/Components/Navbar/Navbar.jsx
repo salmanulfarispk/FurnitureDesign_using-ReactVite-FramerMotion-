@@ -34,7 +34,7 @@ export default function Navbar() {
         }
       >
         <div className='grid grid-cols-2 justify-items-center items-center content-center w-full '>
-          <div>
+          <div className='pl-20  w-4/5'>
             <img src={logo} alt='logo-img'
               className='h-10'
             />

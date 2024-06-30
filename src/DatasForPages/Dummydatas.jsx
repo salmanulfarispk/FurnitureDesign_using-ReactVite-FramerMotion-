@@ -121,6 +121,7 @@ export const navbarData = [
       img: sofa3,
     },
   ];
+  
   export const tabsData = [
     {
       id: "0",
