@@ -22,8 +22,7 @@ export const MidComponentParent = () => {
         <MidComponentItem title="Search by room"
          img={MidPhone2}
         />
-        </div>
-        
+        </div>    
     </div>
   )
 }
