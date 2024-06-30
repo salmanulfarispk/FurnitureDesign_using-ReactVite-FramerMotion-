@@ -54,7 +54,7 @@ export const MidFilterSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{once : true}}   //animation only occurs once when the element enters the viewport,not for re-enters into viewport
-            transition={{duration: 1.5}}
+            transition={{duration: 1.5 }}
             variants={{
                 visible: {opacity:1 ,scale:1},
                 hidden: {opacity:0 ,scale: 0}

@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar"
 import Header from '../Headers/Header'
 import { WrapperContainer } from '../WrapperContainer/WrapperContainer'
 import { MidFilterSection } from '../Midsection/MidFilterSection'
+import { MidComponentParent } from '../Midsection/MidComponentParent'
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <div className='bg-gray-100 w-full'>
          <WrapperContainer>
           <MidFilterSection/>
+          <MidComponentParent/>
          </WrapperContainer>
       </div>
 
