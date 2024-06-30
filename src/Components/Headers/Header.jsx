@@ -35,7 +35,7 @@ function Header() {
                         <h2 className='text-5xl pb-4 font-serif font-medium no-underline align-middle tracking-wide normal-case leading-normal text-dark '>modern design</h2>
                     </div>
                     <motion.img
-                        className='h-[765px] w-full bg-no-repeat bg-center relative z-10 rounded-xl'
+                        className='h-[665px] w-full bg-no-repeat bg-center relative z-10 rounded-xl'
                         src={header1}
                         alt='header-phone'
                         animate={{
