@@ -10,7 +10,7 @@ module.exports = withMT({
         russoOne : ["Russo One"]
       },
       colors:{
-        dark: '#0d1117',
+        dark: "#0d1117",
       }
     },
     backgroundImage:{

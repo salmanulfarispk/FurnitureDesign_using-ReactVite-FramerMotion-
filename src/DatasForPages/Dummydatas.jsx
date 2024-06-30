@@ -109,14 +109,14 @@ export const navbarData = [
     {
       id: "2",
       title: "Room 2",
-      text: "AxeL is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.",
+      text: "AxeL is your best firend for interior design, download the app and feel free to explore beautifull modern and premium designs.",
       type: "Room2",
       img: chair,
     },
     {
       id: "3",
       title: "Room 3",
-      text: "AxeL is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.",
+      text: "AxeL is your best firend for interior design, download the app and feel free to explore  modern and magical designs.",
       type: "Room3",
       img: sofa3,
     },
