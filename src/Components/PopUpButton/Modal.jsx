@@ -14,8 +14,7 @@ export const Modal = ({open ,setOpen}) => {
      }
   return (
     <div>
-        <motion.div className='relative flex flex-col rounded-2xl h-full w-full bg-blue-200 bg-clip-padding backdrop-filter
-         backdrop-blur-none bg-opacity-50 border border-blue-100'
+        <motion.div className='bg-white fixed right-4 bottom-2 z-20 flex flex-col rounded-2xl'
         initial={{scale:1,opacity:0,height:0,width:0}}
         animate={{
             x: open ? -30 : 0,
@@ -32,13 +31,13 @@ export const Modal = ({open ,setOpen}) => {
               transition={{type:"tween",duration: 2}}
             >
 
-            <h5 className='cursor-pointer text-4xl text-blue-600 font-inter font-medium tracking-tight pt-4'>
+            <h5 className='cursor-pointer text-4xl text-blue-500 font-inter font-medium tracking-tight pt-4'>
                 Hello There 🖐🏻
             </h5>
-            <p className="text-lg text-blue-600 font-inter font-medium tracking-tight pt-4">
+            <p className="text-lg text-blue-500 font-inter font-medium tracking-tight pt-4">
             Welcome to our website.
           </p>
-          <span className="text-md text-blue-600 font-inter font-medium tracking-tight pt-4">
+          <span className="text-md text-blue-500 font-inter font-medium tracking-tight pt-4">
             Ask us anything.
           </span>
 
@@ -47,7 +46,7 @@ export const Modal = ({open ,setOpen}) => {
               <input
                 type="text"
                 name="message"
-                className="outline-none border-none text-yellow-400 bg-transparent"
+                className="outline-none border-none text-black"
                 placeholder="Send us a message..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
