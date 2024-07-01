@@ -58,7 +58,7 @@ export const TabComponent = () => {
           >
             {tabsData.map(({ value, img }) => (
               <TabPanel key={value} value={value}>
-                <img className="h-[650px]" src={img} alt="phone"></img>
+                <img className="h-[650px] hover:scale-105 ease-in-out duration-1000 cursor-pointer" src={img} alt="phone"></img>
               </TabPanel>
             ))}
           </TabsBody>
