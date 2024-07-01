@@ -18,7 +18,7 @@ export const MidChild = ({data,click}) => {
         
         >
            <div className='w-[500px]'>
-             <h3 className='font-bold text-4xl font-inter no-underline align-middle tracking-wide 
+             <h3 className='font-bold text-6xl font-inter no-underline align-middle tracking-wide 
              normal-case leading-none text-dark pb-4'>{item.title}</h3>
            </div>
             <div className='flex flex-row justify-between items-center w-full'>

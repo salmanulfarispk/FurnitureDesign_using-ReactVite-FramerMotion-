@@ -60,7 +60,7 @@ export const MidFilterSection = () => {
                 hidden: {opacity:0 ,scale: 0}
             }}
            >
-                <h2 className='w-96 text-5xl font-bold font-inter no-underline align-middle 
+                <h2 className='w-96 text-6xl font-bold font-inter no-underline align-middle 
                 tracking-wide normal-case leading-none text-dark'>check out some of the news
                 </h2>
                

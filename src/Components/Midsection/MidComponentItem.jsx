@@ -18,7 +18,7 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
                 hidden: { opacity: 0, scale: 0 },
               }}
          >
-           <h2 className='text-4xl pt-10 pb-4 font-bold font-inter no-underline normal-case 
+           <h2 className='text-6xl pt-10 pb-4 font-bold font-inter no-underline normal-case 
            align-middle tracking-wide leading-none text-dark'>{title}</h2>
            <p className='text-2xl w-full pb-4 font-normal font-inter no-underline align-middle
             tracking-wide normal-case leading-none text-dark'>{text}</p>
@@ -48,7 +48,7 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
         <div id='room' className='flex flex-row-reverse justify-around items-center w-full'>
               
               <div className='pb-4'>
-                  <h2 className='text-4xl pt-10 pb-4 font-bold font-inter no-underline align-middle
+                  <h2 className='text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle
                    tracking-wide normal-case leading-none text-dark'>{title}</h2>
 
                <div className='flex flex-col'>
