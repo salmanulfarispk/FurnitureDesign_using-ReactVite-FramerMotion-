@@ -14,16 +14,11 @@ import { PopUpButton } from '../PopUpButton/PopUpButton'
 
 function Home() {
 
-  const sectionTop=useRef()
-
-  const handleScroll=()=>{
-    sectionTop.current?.scrollIntoView({ behavior: "smooth"})
-  };
   return (
     <div className='relative'>
 
      <div className='fixed  right-4 bottom-2 z-20'>
-        <PopUpButton handleScroll={handleScroll}/>
+        <PopUpButton />
      </div>
 
       <div className='bg-white'>
