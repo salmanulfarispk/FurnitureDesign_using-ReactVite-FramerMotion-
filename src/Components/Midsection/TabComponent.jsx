@@ -12,7 +12,7 @@ export const TabComponent = () => {
   return (
     <div id='features'>
       <Tabs id="custom-animation" value="bedroom" className="grid grid-cols-2 justify-items-center content-between w-full">
-        <div className='w-4/5 pl-20 pt-36'>
+        <div className='w-4/5 pl-20 pt-32'>
           <h1 className='text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle 
           tracking-wide normal-case leading-none text-dark'>Features</h1>
           <p className='text-2xl  pb-4 font-normal font-inter no-underline align-middle 

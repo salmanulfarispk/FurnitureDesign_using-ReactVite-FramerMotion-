@@ -5,6 +5,9 @@ import { WrapperContainer } from '../WrapperContainer/WrapperContainer'
 import { MidFilterSection } from '../Midsection/MidFilterSection'
 import { MidComponentParent } from '../Midsection/MidComponentParent'
 import { TabComponent } from '../Midsection/TabComponent'
+import { FurnitureFlow } from '../Midsection/FurnitureFlow'
+import NewsLetter from '../Midsection/NewsLetter'
+
 
 function Home() {
   return (
@@ -20,6 +23,8 @@ function Home() {
           <MidFilterSection/>
           <MidComponentParent/>
           <TabComponent/>
+          <FurnitureFlow/>
+          <NewsLetter/>
          </WrapperContainer>
       </div>
 
