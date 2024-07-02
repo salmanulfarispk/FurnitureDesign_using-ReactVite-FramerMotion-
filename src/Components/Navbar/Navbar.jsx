@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import logo from "../../assets/images/logo.svg"
 import { navbarData } from "../../DatasForPages/Dummydatas"
 import { Link } from 'react-scroll'
+import  { ThemeBgContext } from "../ContextWrapper/ThemeContext"
+
 
 export default function Navbar() {
  
   const [scroll,setScroll]=useState(false)
+
+  const {theme}=useContext(ThemeBgContext)
 
   const handleScroll=()=>{
     if(window.scrollY > 50){
@@ -51,8 +55,11 @@ export default function Navbar() {
                   isDynamic={true}
                   ignoreCancelEvents={false}
                   spyThrottle={500}
-                  className='cursor-pointer text-dark font-inter text-lg font-medium 
-                  tracking-tight py-1 px-2 hover:text-blue-500'
+                  className={
+                    theme === "light"
+                      ? "cursor-pointer text-dark font-inter text-lg font-medium tracking-tight py-1 px-2 hover:text-blue-500"
+                      : "cursor-pointer text-white font-inter text-lg font-medium tracking-tight py-1 px-2 hover:text-blue-500"
+                  }
                   >
                   {item.name}
                 </Link>

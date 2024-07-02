@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { MidButton } from './MidButton'
 import { sliderData } from '../../DatasForPages/Dummydatas'
 import { MidChild } from './MidChild'
 import { motion } from 'framer-motion'
+import { ThemeBgContext } from "../ContextWrapper/ThemeContext"
 
 export const MidFilterSection = () => {
+
+  const {theme}=useContext(ThemeBgContext)
 
     const buttons=[
     {
@@ -60,8 +63,12 @@ export const MidFilterSection = () => {
                 hidden: {opacity:0 ,scale: 0}
             }}
            >
-                <h2 className='w-96 text-6xl font-bold font-inter no-underline align-middle 
-                tracking-wide normal-case leading-none text-dark'>check out some of the news
+                <h2 className={
+                  theme === "light" ?
+                'w-96 text-6xl font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+                'w-96 text-6xl font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+                }
+                >check out some of the news
                 </h2>
                
                <MidButton buttons={buttons} filter={filterData} selected={selected}/>

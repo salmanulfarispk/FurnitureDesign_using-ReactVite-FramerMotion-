@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { motion } from 'framer-motion'
+import { ThemeBgContext } from "../ContextWrapper/ThemeContext"
 
 export const MidChild = ({data,click}) => {
+  
+  const {theme}=useContext(ThemeBgContext)
+
   return (
     <div>
       <div>

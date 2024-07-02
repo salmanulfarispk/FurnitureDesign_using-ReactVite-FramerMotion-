@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import Navbar from "../Navbar/Navbar"
 import Header from '../Headers/Header'
 import { WrapperContainer } from '../WrapperContainer/WrapperContainer'
@@ -10,9 +10,13 @@ import NewsLetter from '../Midsection/NewsLetter'
 import { Cards } from '../Midsection/Card'
 import Footer from '../Footer/Footer'
 import { PopUpButton } from '../PopUpButton/PopUpButton'
+import  { ThemeBgContext } from "../ContextWrapper/ThemeContext"
+
 
 
 function Home() {
+
+  const {theme}=useContext(ThemeBgContext)
 
   return (
     <div className='relative'>
@@ -21,7 +25,7 @@ function Home() {
         <PopUpButton />
      </div>
 
-      <div className='bg-white'>
+      <div className={theme === "light" ? "bg-white" : "bg-dark"}>
         <WrapperContainer navHead>
       <Navbar/>
       <Header/>
