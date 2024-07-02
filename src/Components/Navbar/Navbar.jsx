@@ -33,8 +33,8 @@ export default function Navbar() {
        <div
         className={
           scroll
-            ? "h-16 w-full fixed flex  items-center transition ease-in-out duration-500 bg-white-200 rounded-sm bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 z-20"
-            : "bg-transparent h-16 w-full fixed transition ease-in-out duration-500 flex items-center z-20"
+            ? "sm:hidden h-16 w-full fixed flex  items-center transition ease-in-out duration-500 bg-white-200 rounded-sm bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 z-20"
+            : "sm:hidden bg-transparent h-16 w-full fixed transition ease-in-out duration-500 flex items-center z-20"
         }
       >
         <div className='grid grid-cols-2 justify-items-center items-center content-center w-full '>
