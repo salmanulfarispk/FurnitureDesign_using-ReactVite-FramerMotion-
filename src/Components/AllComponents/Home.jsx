@@ -11,7 +11,7 @@ import { Cards } from '../Midsection/Card'
 import Footer from '../Footer/Footer'
 import { PopUpButton } from '../PopUpButton/PopUpButton'
 import  { ThemeBgContext } from "../ContextWrapper/ThemeContext"
-import { MobileNav } from '../Navbar/MobileNav'
+import MobileNav from "../Navbar/MobileNav"
 
 
 
@@ -20,8 +20,8 @@ function Home() {
   const {theme}=useContext(ThemeBgContext)
 
   return (
-    <div className='relative'>
-        <MobileNav/>
+    <div className='relative'>     
+         <MobileNav/>
      <div className='fixed  right-4 bottom-2 z-20'>
         <PopUpButton />
      </div>
