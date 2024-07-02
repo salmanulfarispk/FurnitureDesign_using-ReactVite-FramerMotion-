@@ -30,6 +30,7 @@ function Home() {
       <Navbar/>
       <Header/>
       </WrapperContainer>
+      </div>
       <div className='bg-gray-100 w-full'>
          <WrapperContainer>
           <MidFilterSection/>
@@ -39,13 +40,13 @@ function Home() {
           <Cards/>
           <NewsLetter/>
          </WrapperContainer>
-      </div>
-      <div>
+
+        <div>
         <Footer/>
       </div>
 
-
       </div>
+      
     </div>
   )
 }

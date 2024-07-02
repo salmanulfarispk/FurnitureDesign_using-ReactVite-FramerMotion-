@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { motion } from 'framer-motion'
 import { room } from '../../DatasForPages/Dummydatas'
+import {ThemeBgContext} from "../ContextWrapper/ThemeContext"
 
 const MidComponentItem = ({title ,img , text ,reverse}) => {
+   
+  const {theme}=useContext(ThemeBgContext)
+
   return (
     <div id='company'>
       {reverse ? (
@@ -18,10 +22,22 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
                 hidden: { opacity: 0, scale: 0 },
               }}
          >
-           <h2 className='text-6xl pt-10 pb-4 font-bold font-inter no-underline normal-case 
-           align-middle tracking-wide leading-none text-dark'>{title}</h2>
-           <p className='text-2xl w-full pb-4 font-normal font-inter no-underline align-middle
-            tracking-wide normal-case leading-none text-dark'>{text}</p>
+           <h2 className={
+             theme === "light" ?
+           'text-6xl pt-10 pb-4 font-bold font-inter no-underline normal-case align-middle tracking-wide leading-none text-dark':
+           'text-6xl pt-10 pb-4 font-bold font-inter no-underline normal-case align-middle tracking-wide leading-none text-white'
+
+           }>
+           {title}
+           </h2>
+
+           <p className={
+             theme === "light" ?
+            'text-2xl w-full pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+            'text-2xl w-full pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+             
+            }>
+            {text}</p>
            <button className='pushable mt-4'>
              <span className='front'>Start Now</span>
            </button>
@@ -48,8 +64,14 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
         <div id='room' className='flex flex-row-reverse justify-around items-center w-full'>
               
               <div className='pb-4'>
-                  <h2 className='text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle
-                   tracking-wide normal-case leading-none text-dark'>{title}</h2>
+                  <h2 className={
+                    theme === "light" ?
+                  'text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+                  'text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+                   
+                   }>
+                    {title}
+                  </h2>
 
                <div className='flex flex-col'>
               {room.map((item)=>(
@@ -59,7 +81,14 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
                     className='w-14 h-14 '
                     />
                   </div>
-                  <p className='text-2xl w-full font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark'>{item.name}</p>
+                  <p className={
+                    theme === "light" ?
+                  'text-2xl w-full font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+                  'text-2xl w-full font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+                    
+                    }>
+                    {item.name}
+                    </p>
               </div>
              ))}
              </div>

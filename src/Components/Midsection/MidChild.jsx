@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ThemeBgContext } from "../ContextWrapper/ThemeContext"
 
 export const MidChild = ({data,click}) => {
-  
+
   const {theme}=useContext(ThemeBgContext)
 
   return (
@@ -22,13 +22,23 @@ export const MidChild = ({data,click}) => {
         
         >
            <div className='w-[500px]'>
-             <h3 className='font-bold text-6xl font-inter no-underline align-middle tracking-wide 
-             normal-case leading-none text-dark pb-4'>{item.title}</h3>
+             <h3 className={
+              theme === "light" ?
+             'font-bold text-6xl font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark pb-4':
+             'font-bold text-6xl font-inter no-underline align-middle tracking-wide normal-case leading-none text-white pb-4'
+
+             }>
+              {item.title}</h3>
            </div>
             <div className='flex flex-row justify-between items-center w-full'>
                <div>
-                <p className='text-2xl font-normal font-inter no-underline align-middle tracking-wide 
-             normal-case leading-none text-dark'>{item.text}</p>
+                <p className={
+                   theme === "light" ?
+                  'text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+                  'text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+                   
+                }>
+                {item.text}</p>
                </div>
                <div className='absolute right-0 -z-10'>
                  <motion.img src={item.img} alt={item.title}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { cardData } from '../../DatasForPages/Dummydatas'
 import googlePlay from "../../assets/images/google-play.svg";
 import appleStore from "../../assets/images/apple-store.svg";
@@ -11,20 +11,30 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
+import {ThemeBgContext} from "../ContextWrapper/ThemeContext"
 
 export const Cards = () => {
-
+    
+    const { theme }=useContext(ThemeBgContext)
     const starList = [1, 2, 3, 4, 5];
 
   return (
     <div id="demo">
       <div className="text-center">
-        <h2
-          className="text-dark text-6xl font-bold pt-20 no-underline font-inter align-middle tracking-wide normal-case leading-none cursor-pointer">
+        <h2 className={
+          theme === "light" ?
+          "text-dark text-6xl font-bold pt-20 no-underline font-inter align-middle tracking-wide normal-case leading-none cursor-pointer":
+          "text-white text-6xl font-bold pt-20 no-underline font-inter align-middle tracking-wide normal-case leading-none cursor-pointer"
+            
+          }>
           Request a demo
         </h2>
-        <p
-          className="text-dark text-2xl font-normal pt-10 no-underline font-inter align-middle tracking-wide normal-case leading-none cursor-pointer">
+        <p className={
+          theme === "light" ?
+          "text-dark text-2xl font-normal pt-10 no-underline font-inter align-middle tracking-wide normal-case leading-none cursor-pointer":
+          "text-white text-2xl font-normal pt-10 no-underline font-inter align-middle tracking-wide normal-case leading-none cursor-pointer"
+              
+         }>
           Explore all the nice stuff that AxeL is providing and much more...{" "}
         </p>
         <div className="w-full flex flex-row items-center justify-evenly pt-10">

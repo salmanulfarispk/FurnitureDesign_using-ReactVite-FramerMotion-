@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     Tabs,
     TabsHeader,
@@ -7,29 +7,46 @@ import {
     TabPanel,
 } from "@material-tailwind/react";
 import { tabsData } from '../../DatasForPages/Dummydatas';
+import { ThemeBgContext } from '../ContextWrapper/ThemeContext';
+
 
 export const TabComponent = () => {
+
+  const {theme}=useContext(ThemeBgContext)
+
   return (
     <div id='features'>
       <Tabs id="custom-animation" value="bedroom" className="grid grid-cols-2 justify-items-center content-between w-full">
         <div className='w-4/5 pl-20 pt-32'>
-          <h1 className='text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle 
-          tracking-wide normal-case leading-none text-dark'>Features</h1>
-          <p className='text-2xl  pb-4 font-normal font-inter no-underline align-middle 
-          tracking-wide normal-case leading-none text-dark'> 
+          <h1 className={
+             theme === "light" ?
+          'text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+          'text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+            
+          }>
+            Features
+          </h1>
+
+          <p className={
+             theme === "light" ?
+          'text-2xl  pb-4 font-normal pt-5 font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+          'text-2xl  pb-4 font-normal pt-5 font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+             
+            }>
             AxeL offers many great features. You can create your own room,
             request a service, buy modern-looking furniture, sell furniture,
             and so much more. Take a sneak peek at each of them.
           </p>
-          <TabsHeader className='flex justify-center items-center content-center bg-gray-100 w-fit'>
+          <TabsHeader className='flex justify-center mt-7 items-center content-center bg-gray-100 w-fit'>
             {tabsData.map(({ label, value }) => (
-              <Tab key={value} value={value}>
+              <Tab key={value} value={value} className='px-5'>
                 <p className='text-royalBlue font-inter leading-normal no-underline align-middle tracking-wide normal-case'>
                   {label}
                 </p>
               </Tab>
             ))}
           </TabsHeader>
+
           <TabsBody
             animate={{
               initial: { y: 250 }, //down from its normal position
@@ -39,7 +56,12 @@ export const TabComponent = () => {
           >
             {tabsData.map(({ value, desc, linkText }) => (
               <TabPanel key={value} value={value}>
-                <p className='text-lg relative right-3 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark'>
+                <p className={
+                   theme === "light" ?
+                  'text-lg relative right-3 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+                  'text-lg relative right-3 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+                      
+                 }>
                   {desc}
                 </p>
                 <span className='text-royalBlue font-inter leading-normal no-underline align-middle tracking-wide normal-case relative cursor-pointer right-3 hover:animate-pulse'>
