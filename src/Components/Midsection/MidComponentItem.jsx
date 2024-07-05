@@ -10,9 +10,9 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
   return (
     <div id='company'>
       {reverse ? (
-         <div className='grid grid-cols-2 justify-items-center items-center'>
+         <div className='sm:grid-cols-1 grid grid-cols-2 justify-items-center items-center'>
 
-         <motion.div className='w-4/5 pl-24'
+         <motion.div className='sm:w-full sm:pl-4 w-4/5 pl-24'
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -24,8 +24,8 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
          >
            <h2 className={
              theme === "light" ?
-           'text-6xl pt-10 pb-4 font-bold font-inter no-underline normal-case align-middle tracking-wide leading-none text-dark':
-           'text-6xl pt-10 pb-4 font-bold font-inter no-underline normal-case align-middle tracking-wide leading-none text-white'
+           'sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline normal-case align-middle tracking-wide leading-none text-dark':
+           'sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline normal-case align-middle tracking-wide leading-none text-white'
 
            }>
            {title}
@@ -33,8 +33,8 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
 
            <p className={
              theme === "light" ?
-            'text-2xl w-full pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
-            'text-2xl w-full pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+            'sm:text-xl text-2xl w-full pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+            'sm:text-xl text-2xl w-full pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
              
             }>
             {text}</p>
@@ -54,20 +54,20 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
             }}
            >
               <img src={img} alt='phone1'
-               className='h-[675px] pt-1 hover:rotate-6 duration-1000 cursor-pointer'/>
+               className='sm:h-[475px] h-[675px] pt-1 hover:rotate-6 duration-1000 cursor-pointer'/>
 
            </motion.div>
  
        </div>
       )  : (
 
-        <div id='room' className='flex flex-row-reverse justify-around items-center w-full'>
+        <div id='room' className='sm:flex-col flex flex-row-reverse justify-around items-center w-full'>
               
-              <div className='pb-4'>
+              <div className='sm:w-full sm:pl-4 pb-4'>
                   <h2 className={
                     theme === "light" ?
-                  'text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
-                  'text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+                  'sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+                  'sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
                    
                    }>
                     {title}
@@ -83,8 +83,8 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
                   </div>
                   <p className={
                     theme === "light" ?
-                  'text-2xl w-full font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
-                  'text-2xl w-full font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+                  'sm:text-xl text-2xl w-full font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+                  'sm:text-xl text-2xl w-full font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
                     
                     }>
                     {item.name}
@@ -96,7 +96,7 @@ const MidComponentItem = ({title ,img , text ,reverse}) => {
 
            <div>
             <img src={img} alt='phone'
-            className='h-[675px] pl-1 hover:rotate-[-6deg] duration-1000 cursor-pointer'
+            className='sm:h-[475px] h-[675px] pl-1 hover:rotate-[-6deg] duration-1000 cursor-pointer'
             />
            </div>
         </div>

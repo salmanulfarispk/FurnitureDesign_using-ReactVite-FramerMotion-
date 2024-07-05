@@ -10,7 +10,7 @@ export const FurnitureFlow = () => {
   return (
     <div>
         <img src={theme === "light" ? flowlight : flowDark}
-        className="bg-center bg-no-repeat bg-cover h-full w-full"
+        className="sm:hidden bg-center bg-no-repeat bg-cover h-full w-full"
          alt='furniture-flow'
         />
 

@@ -10,7 +10,7 @@ export const MidChild = ({data,click}) => {
     <div>
       <div>
      {data.map((item)=>(
-        <motion.div key={item.id} className='relative flex flex-col z-10'
+        <motion.div key={item.id} className='sm:pt-10 sm:right-2 relative flex flex-col z-10'
          initial={{scale: 0.8, opacity: 0}}
          animate={{
             y: click ? 20 : 0,
@@ -21,11 +21,11 @@ export const MidChild = ({data,click}) => {
         transition={{type: "spring", duration: 1.5}}
         
         >
-           <div className='w-[500px]'>
+           <div className='sm:w-full w-[500px]'>
              <h3 className={
               theme === "light" ?
-             'font-bold text-6xl font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark pb-4':
-             'font-bold text-6xl font-inter no-underline align-middle tracking-wide normal-case leading-none text-white pb-4'
+             'sm:text-4xl font-bold text-6xl font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark pb-4':
+             'sm:text-4xl font-bold text-6xl font-inter no-underline align-middle tracking-wide normal-case leading-none text-white pb-4'
 
              }>
               {item.title}</h3>
@@ -34,8 +34,8 @@ export const MidChild = ({data,click}) => {
                <div>
                 <p className={
                    theme === "light" ?
-                  'text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
-                  'text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
+                  'sm:text-2xl text-3xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark':
+                  'sm:text-2xl text-3xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white'
                    
                 }>
                 {item.text}</p>
