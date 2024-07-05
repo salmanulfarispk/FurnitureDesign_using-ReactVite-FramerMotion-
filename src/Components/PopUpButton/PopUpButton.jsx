@@ -34,7 +34,7 @@ export const PopUpButton = ({ handleScroll }) => {
         {open && <Modal open={open} setOpen={setOpen}/>}
         <div>
             <motion.button onClick={handleClick}
-             className='rounded-full flex text-white flex-col fixed right-14 bottom-6 z-20 bg-blue-600 px-6 py-4 cursor-pointer hover:bg-blue-400 duration-700 ease-in-out'
+             className='sm:right-4 sm:bottom-20 rounded-full flex text-white flex-col fixed right-14 bottom-6 z-20 bg-blue-600 px-6 py-4 cursor-pointer hover:bg-blue-400 duration-700 ease-in-out'
              variants={itemVariants} //The variants prop, allows you to define multiple states for an element and specify how it should animate between these states.
              animate={open ? "closed" : "open"}
              whileHover={{scale: "0.9"}}
@@ -56,7 +56,7 @@ export const PopUpButton = ({ handleScroll }) => {
             </motion.button>
 
             <Tooltip content="Back to the top">
-           <div className="absolute left-14 hidden rounded-full text-white flex-col bottom-6 z-10 bg-dark px-6 py-4 cursor-pointer">
+           <div className="sm:block sm:left-4 sm:bottom-20 absolute left-14 hidden rounded-full text-white flex-col bottom-6 z-10 bg-dark px-6 py-4 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

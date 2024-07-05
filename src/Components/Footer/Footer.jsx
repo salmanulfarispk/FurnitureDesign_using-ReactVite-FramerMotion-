@@ -10,8 +10,8 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <div>
-      <div className="grid grid-cols-4 gap-0 items-center justify-items-center">
-        <div className="h-64 mx-auto pl-24">
+      <div className="sm:grid-cols-2 grid grid-cols-4 gap-0 items-center justify-items-center">
+        <div className="sm:w-full sm:pl-8 h-64 mx-auto pl-24">
           <div>
             <img className="h-10 cursor-pointer" src={logo} alt="logo"></img>
           </div>
