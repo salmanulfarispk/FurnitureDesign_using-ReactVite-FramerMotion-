@@ -22,7 +22,7 @@ function Home() {
   return (
     <div className='relative'>     
          <MobileNav/>
-     <div className='fixed  right-4 bottom-2 z-20'>
+     <div>
         <PopUpButton />
      </div>
 
